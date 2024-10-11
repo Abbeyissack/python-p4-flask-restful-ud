@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from faker import Faker
+from flask import Flask
 
 from app import app
 from models import db, Newsletter
@@ -8,7 +8,7 @@ from models import db, Newsletter
 
 with app.app_context():
     
-    fake = Faker()
+    fake = Flask()
 
     Newsletter.query.delete()
 
